@@ -1,1 +1,1 @@
-# CS193p-RemeberTheEmojis
+# CS193p-RememberThe-Emojis
