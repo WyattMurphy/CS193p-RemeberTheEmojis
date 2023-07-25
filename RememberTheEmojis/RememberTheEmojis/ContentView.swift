@@ -15,48 +15,48 @@ struct ContentView: View {
     
     var emojis : Array<String> = ["🎻", "🐋" ,"🥸" ,"👾", "🐶", "🐱" ,"🐭" ,"🐹","🐰", "🦊" ,"🐻" ,"🐼","🙊",                               "🐷" ,"🐮" ,"🦁","🐨", "🐸" ,"🐦"]
     
-    @State var emojiCount = 8
-    // 🥸👻👾🤖🐋🎻c🐶🐱🐭🐹🐰🦊🐻🐼🐻‍❄️🙊🐷🐮🦁🐨🐸🐦
+    @State var emojiCount = 16
+    // 🥸👻👾🤖🐋🎻🐶🐱🐭🐹🐰🦊🐻🐼🐻‍❄️🙊🐷🐮🦁🐨🐸🐦
     
     var body: some View {
         VStack{
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]){
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]){
                 ForEach(emojis[0..<emojiCount], id:\.self, content: { emoji in CardView(moji : emoji).aspectRatio(2/3, contentMode: .fit)})
             }
             Spacer()
-            HStack{
-                    remove
-                    Spacer()
-                    add
-                }
-                .padding(.horizontal)
-                .font(.largeTitle)
-                .foregroundColor(.blue)
+//            HStack{
+//                    remove
+//                    Spacer()
+//                    add
+//                }
+//                .padding(.horizontal)
+//                .font(.largeTitle)
+//                .foregroundColor(.blue)
             }
             .padding(.horizontal)
             .foregroundColor(.purple)
         }
     
     
-    var remove: some View {
-        Button(action: {
-            if(emojiCount > 1){
-                emojiCount -= 1
-            }
-        }, label: {
-            Image(systemName: "minus.diamond.fill")
-        })
-    }
-    var add: some View {
-        Button(action: {
-            if(emojiCount < emojis.count){
-                emojiCount += 1
-            }
-        }, label: {
-            Image(systemName: "plus.diamond.fill")
-
-        })
-    }
+//    var remove: some View {
+//        Button(action: {
+//            if(emojiCount > 1){
+//                emojiCount -= 1
+//            }
+//        }, label: {
+//            Image(systemName: "minus.diamond.fill")
+//        })
+//    }
+//    var add: some View {
+//        Button(action: {
+//            if(emojiCount < emojis.count){
+//                emojiCount += 1
+//            }
+//        }, label: {
+//            Image(systemName: "plus.diamond.fill")
+//
+//        })
+//    }
         
 }
 
