@@ -24,7 +24,8 @@ class EmojiMemoryGame {
     
     private var model: MemoryGame<String> = createMemoryGame()
 
+    // var allows encapusulation by insulating access to model.cards 
     var cards: Array<MemoryGame<String>.Card> {
-        return model.cards
+        model.cards
     }
 }
